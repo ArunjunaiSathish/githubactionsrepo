@@ -11,7 +11,9 @@ jobs:
         - name: welcome message
           run: echo "hello world"
         - name: list files
-          run: ls -al
+          run: |
+               ls -al
+               echo "hello arun all is well"
         - name: read file
           run: cat README.md 
 
