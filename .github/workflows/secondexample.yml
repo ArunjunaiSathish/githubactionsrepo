@@ -1,0 +1,19 @@
+name: My second workflow
+
+on: push
+
+jobs:
+    first_job:
+        runs-on: ubuntu-latest
+        steps:
+        - name: Checkout
+          uses: actions/checkout@v4
+        - name: welcome message
+          run: echo "hello world"
+        - name: list files
+          run: |
+               ls -al
+               echo "hello arun all is well"
+        - name: read file
+          run: cat README.md 
+
