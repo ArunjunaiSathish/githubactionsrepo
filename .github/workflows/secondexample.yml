@@ -16,4 +16,18 @@ jobs:
                echo "hello arun all is well"
         - name: read file
           run: cat README.md 
+    thrid_job:
+            needs: second_job
+            runs-on: ubuntu-latest
+            steps:
+            - name: Checkout
+              uses: actions/checkout@v4
+            - name: welcome message
+              run: echo "hello this is third job"
+            - name: list files
+              run: |
+                   ls -al
+                   echo "hello arun be strong all is well"
+            - name: read file
+              run: cat README.md       
 
